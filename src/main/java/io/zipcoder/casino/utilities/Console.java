@@ -1,6 +1,8 @@
 package io.zipcoder.casino.utilities;
 
 
+import io.zipcoder.casino.Games.Craps;
+
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -44,19 +46,21 @@ public final class Console {
         print(val + "\n", args);
     }
 
+    public void println(Craps.BetList betList) {
+        print(betList.toString() + "\n");
+    }
+
     public String getStringInput(String prompt, Object... args) {
         println(prompt, args);
         return input.nextLine();
     }
 
     public String getStandardInput(String prompt, Object... args) {
-        println(prompt, args);
-        return input.nextLine().trim().toLowerCase();
+        return getStringInput(prompt, args).trim().toLowerCase();
     }
 
     public String getStandardInputCaps(String prompt, Object... args) {
-        println(prompt, args);
-        return input.nextLine().trim().toUpperCase();
+        return getStringInput(prompt, args).trim().toUpperCase();
     }
 
     public Double getDoubleInput(String prompt, Object... args) {
