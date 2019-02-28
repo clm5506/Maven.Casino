@@ -17,8 +17,8 @@ import java.util.List;
 
 public class BlackJack implements Game {
 
-    private BlackJackPlayer dealer = new BlackJackPlayer(new Profile());
-    private BlackJackPlayer user = new BlackJackPlayer(Casino.getProfile());
+    private BlackJackPlayer dealer = new io.zipcoder.casino.casino.games.cardgames.BlackJackPlayer(new Profile());
+    private io.zipcoder.casino.casino.games.cardgames.BlackJackPlayer user = new BlackJackPlayer(Casino.getProfile());
     private Deck currentDeck = new Deck();
     private int userTotal;
     private int dealerTotal;
